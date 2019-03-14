@@ -1,0 +1,23 @@
+{
+  "name": "form",
+  "version": "1.0.0",
+  "description": "form_feedback",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": ".\\node_modules\\.bin\\gulp"
+  },
+  "author": "kirill voyshnarovich",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-image": "^4.4.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-uglify": "^3.0.1",
+    "sass": "^1.15.1"
+  },
+  "dependencies": {}
+}

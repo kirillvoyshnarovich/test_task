@@ -1,0 +1,136 @@
+$checkbox_background:#C4C4C4;
+
+//   -----------------------------ne
+
+.wrapper-radios {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+}
+
+.wrapper-checkbox__container {
+    display:flex;
+    align-items: center;
+    height:17px;
+    font-size:12px;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom:24px;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        background-color: #C4C4C4;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    .checkmark:after {
+        left: 3px;
+        top: 0px;
+        width: 7px;
+        height: 9px;
+        border: solid #FFB78F;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+  
+//   --------------------------------------------------
+
+.wrapper-radios__container {
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-right:50px;
+
+  
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #C4C4C4;
+        border-radius: 50%;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    .checkmark:after {
+        top: 5px;
+       left: 5px;
+       width: 16px;
+       height: 16px;
+       border-radius: 50%;
+       background: #FFB78F;
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

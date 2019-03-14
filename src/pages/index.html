@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <link href="styles/main.css" rel="stylesheet"/>
+        <title>form</title>
+    </head>
+    <body>
+        <main class="wrapper">
+            <div class="container">
+                <div class="left-panel">
+                    <img class="left-panel__background" src="image/left_panel-mode-1.png">
+                </div>
+                <div class="right-panel">
+                    <div class="right-panel__heading">
+                        <button class="button right-panel_button-tab active-button" disabled data-button-mode="mode">1</button>
+                        <button class="button right-panel_button-tab" disabled data-button-mode="mode-1">2</button>
+                        <button class="button right-panel_button-tab" disabled data-button-mode="mode-2">3</button>
+                        <img src="./image/menu.svg" class="right-panel__heading--button-menu">
+                    </div>
+                    <form class="right-panel__form" name="form-feedback">
+                        <div class="wrapper-input mode" data-mode="mode">
+                            <input type="text" class="right-panel__form-input" pattern="[a-zA-Zа-яА-ЯёЁ\s-]+" minlength="2" name="surname" placeholder="Фамилия" required>
+                            <span class="warning-icon"><img class="warning-icon__img" src="image/warning.svg"></span>
+                        </div>    
+                        <div class="wrapper-input mode" data-mode="mode">
+                            <input type="text" class="right-panel__form-input" pattern="[a-zA-Zа-яА-ЯёЁ\s-]+" minlength="2" name="name" placeholder="Имя" required>
+                            <span class="warning-icon"><img src="image/warning.svg"></span>
+                        </div>
+                        <div class="wrapper-input mode" data-mode="mode">
+                            <input type="text" class="right-panel__form-input" pattern="[a-zA-Zа-яА-ЯёЁ\s-]+" minlength="2" name="patronymic" placeholder="Отчество" required>
+                            <span class="warning-icon"><img src="image/warning.svg"></span>
+                        </div>
+                        <div class="wrapper-radios mode" data-mode="mode">
+                            <label class="wrapper-radios__container">
+                                <input class="radio" type="radio" checked="checked" name="male" value="man">
+                                <span class="checkmark"></span>
+                                <label class="label-text">Мужчина</label>
+                            </label>               
+                            <label class="wrapper-radios__container">
+                                <input class="radio" type="radio" name="male" value="woman">
+                                <span class="checkmark"></span>
+                                <label class="label-text">Женщина</label>
+                            </label>
+                        </div>
+                        <div class="wrapper-input mode" data-mode="mode">
+                            <input type="text" class="right-panel__form-input" pattern="\d{1,2}/\d{2}/\d{2}" maxlength="8" name="data_birth" placeholder="Дата рождения" required>
+                            <span class="warning-icon"><img src="image/warning.svg"></span>
+                        </div>
+                        <div class="wrapper-checkbox mode" data-mode="mode">
+                            <label class="wrapper-checkbox__container">
+                                <input type="checkbox" class="checkbox">
+                                <span class="checkmark"></span>
+                                <label class="label-text">Соглашаюсь с условиями участия</label>
+                            </label>
+                        </div>
+                        <button class="button right-panel__form-button mode" data-mode="mode" disabled>Продолжить <span class="right-panel__form-button--arrow">⟶</span></button>
+
+
+                        <div class="wrapper-input-mode-1 mode-1" data-mode="mode-1">
+                            <input type="text" class="right-panel__form-input-mode-1" name="phone" pattern="[\d\s\+]{15,15}" placeholder="Телефон">
+                            <span class="warning-icon"><img src="image/warning.svg"></span>
+                        </div>
+                        <div class="wrapper-input-mode-1 mode-1" data-mode="mode-1">
+                            <input type="text" class="right-panel__form-input-mode-1" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,5})+$" name="email" placeholder="Email" required>
+                            <span class="warning-icon"><img src="image/warning.svg"></span>
+                        </div>
+                        <div class="wrapper-input-mode-1 mode-1" data-mode="mode-1">
+                            <input type="text" class="right-panel__form-input-mode-1" pattern="[a-zA-Zа-яА-ЯёЁ\d]+" minlength="6" name="password" placeholder="Пароль" required>
+                            <span class="warning-icon"><img src="image/warning.svg"></span>
+                        </div>
+                        <div class="wrapper-input-mode-1 mode-1" data-mode="mode-1">
+                            <input type="text" class="right-panel__form-input-mode-1" pattern="[a-zA-Zа-яА-ЯёЁ\d]+" minlength="6" name="return_password" placeholder="Повторить пароль" required>
+                            <span class="warning-icon"><img src="image/warning.svg"></span>
+                        </div>
+                        <button class="button right-panel__form-button-mode-1 mode-1" data-mode="mode-1">Продолжить <span class="right-panel__form-button--arrow">⟶</span></button>
+
+
+                        <div class="header-mode-2 mode-2" data-mode="mode-2">
+                            <h2 >На номер <span class="header-mode-2__telefon"></span> отправлен код подтверждения</h2>
+                            <h3 class="header-mode-2__instruction">Введите его в поле ниже:</h3>
+                        </div>
+                        <div class="wrapper-input-mode-2 mode-2" data-mode="mode-2">
+                            <input type="text" class="right-panel__form-input-mode-2" pattern="[0-9]{3}\s[0-9]{2}\s[0-9]{7}" maxlength="15" name="code" placeholder="Код">
+                        </div>
+                        <button class="button right-panel__form-button-mode-2 mode-2" data-mode="mode-2" disabled>Продолжить <span class="right-panel__form-button--arrow">⟶</span></button>
+
+                    </form>
+                </div>
+            </div>
+        </main>
+        <script src="js/validation.js"></script>
+    </body>
+</html>
